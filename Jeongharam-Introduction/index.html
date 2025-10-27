@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정하람의 개발 블로그 | Frontend Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 헤더 네비게이션 -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <span>정하람</span>
+                <i class="fas fa-code"></i>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="fas fa-home"></i>
+                            <span>홈</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="fas fa-user"></i>
+                            <span>나에 대해</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#hobbies" class="nav__link">
+                            <i class="fas fa-heart"></i>
+                            <span>취미</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#favorites" class="nav__link">
+                            <i class="fas fa-star"></i>
+                            <span>좋아하는 것</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#development" class="nav__link">
+                            <i class="fas fa-code"></i>
+                            <span>개발</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="fas fa-envelope"></i>
+                            <span>연락</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main">
+        <!-- 홈 섹션 -->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://github.com/CoderGogh" target="_blank" class="home__social-icon" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:haram001021@gmail.com" class="home__social-icon" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                <image class="home__blob-img" x="12" y="18" xlink:href="images/profile.jpg"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title">안녕하세요, 정하람입니다</h1>
+                        <h3 class="home__subtitle">26세, 성남시 분당구 거주</h3>
+                        <p class="home__description">
+                            부산 해운대구에서 태어나 현재 성남시 분당구에 살고 있습니다. 
+                            개발과 일상의 소소한 즐거움을 함께 나누고 싶어 
+                            이 블로그를 만들게 되었습니다.
+                        </p>
+                        <a href="#about" class="button button--flex home__button">
+                            더 알아보기 <i class="fas fa-arrow-down button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="fas fa-mouse home__scroll-mouse"></i>
+                        <span class="home__scroll-name">스크롤 다운</span>
+                        <i class="fas fa-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 나에 대해 섹션 -->
+        <section class="about section" id="about">
+            <h2 class="section__title">나에 대해</h2>
+            <span class="section__subtitle">간단한 자기소개</span>
+
+            <div class="about__container container grid">
+                <img src="images/profile.jpg" alt="정하람 프로필" class="about__img">
+
+                <div class="about__data">
+                    <div class="about__info-grid">
+                        <div class="about__info-item">
+                            <h3 class="about__info-title"><i class="fas fa-user"></i> 이름</h3>
+                            <p class="about__info-text">정하람</p>
+                        </div>
+                        
+                        <div class="about__info-item">
+                            <h3 class="about__info-title"><i class="fas fa-birthday-cake"></i> 나이</h3>
+                            <p class="about__info-text">26세</p>
+                        </div>
+                        
+                        <div class="about__info-item">
+                            <h3 class="about__info-title"><i class="fas fa-map-marker-alt"></i> 출생</h3>
+                            <p class="about__info-text">부산 해운대구</p>
+                        </div>
+                        
+                        <div class="about__info-item">
+                            <h3 class="about__info-title"><i class="fas fa-home"></i> 거주지</h3>
+                            <p class="about__info-text">성남시 분당구</p>
+                        </div>
+                        
+                        <div class="about__info-item">
+                            <h3 class="about__info-title"><i class="fas fa-brain"></i> MBTI</h3>
+                            <p class="about__info-text">ESTJ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 취미 섹션 -->
+        <section class="hobbies section" id="hobbies">
+            <h2 class="section__title">내 취미</h2>
+            <span class="section__subtitle">일상을 즐겁게 만드는 것들</span>
+
+            <div class="hobbies__container container grid">
+                <div class="hobbies__card">
+                    <div class="hobbies__icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3 class="hobbies__title">운동</h3>
+                    <p class="hobbies__description">
+                        체력관리와 스트레스 해소를 위해 꾸준히 운동을 즐깁니다.
+                        매일마다는 아니지만 격일에 한 번씩 합니다.
+                        요즘 운동에 맛들려서 열심히 하고 있습니다.
+                    </p>
+                </div>
+
+                <div class="hobbies__card">
+                    <div class="hobbies__icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <h3 class="hobbies__title">산책</h3>
+                    <p class="hobbies__description">
+                        집 앞에 큰 공원이 있는데 거기서 산책을 자주 합니다.
+                        요즘 날씨도 좋은데 산책 자주 나가려고 합니다!
+                    </p>
+                </div>
+
+                <div class="hobbies__card">
+                    <div class="hobbies__icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="hobbies__title">음악 듣기</h3>
+                    <p class="hobbies__description">
+                        운동할 때나 산책할 때나 쉬는 시간이나 상관없이
+                        음악을 좋아해서 자주 듣습니다.
+                    </p>
+                </div>
+
+                <div class="hobbies__card">
+                    <div class="hobbies__icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="hobbies__title">사진 찍기</h3>
+                    <p class="hobbies__description">
+                        일상의 소중한 순간들을 카메라에 담으며
+                        세상을 다른 시각으로 바라보는 재미를 느낍니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 좋아하는 것 섹션 -->
+        <section class="favorites section" id="favorites">
+            <h2 class="section__title">좋아하는 것들</h2>
+            <span class="section__subtitle">나를 행복하게 만드는 것들</span>
+
+            <div class="favorites__container container">
+                <!-- 강아지 -->
+                <div class="favorites__category">
+                    <div class="favorites__header">
+                        <i class="fas fa-dog favorites__icon"></i>
+                        <h3 class="favorites__title">강아지</h3>
+                    </div>
+                    <div class="favorites__content">
+                        <div class="favorites__item">
+                            <!-- 하니 갤러리: 폴더에 있는 모든 하니 사진을 표시 -->
+                            <div class="favorites__gallery">
+                                <img src="images/hani_4.jpg" alt="하니 1" class="favorites__pet-img gallery-item">
+                                <img src="images/hani_1.JPG" alt="하니 2" class="favorites__pet-img gallery-item">
+                                <img src="images/hani_2.JPG" alt="하니 3" class="favorites__pet-img gallery-item">
+                                <img src="images/hani_3.JPG" alt="하니 4" class="favorites__pet-img gallery-item">
+                            </div>
+
+                            <div class="favorites__pet-info">
+                                <h4 class="favorites__pet-name">우리집 강아지 하니</h4>
+                                <p class="favorites__pet-description">
+                                    귀여운 우리 가족의 막내, 하니입니다. 
+                                    매일 유레카 쉬는시간마다 힐링을 줘요.
+                                    견종은 토이푸들입니다. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 스포츠 팀 -->
+                <div class="favorites__category">
+                    <div class="favorites__header">
+                        <i class="fas fa-trophy favorites__icon"></i>
+                        <h3 class="favorites__title">응원하는 스포츠 팀</h3>
+                    </div>
+                    <div class="favorites__content">
+                        <div class="favorites__teams">
+                            <div class="favorites__team">
+                                <img src="images/dodgers.jpg" alt="LA Dodgers" class="team__logo-img">
+                                <h4 class="team__name">LA 다저스</h4>
+                                <p class="team__sport">야구</p>
+                            </div>
+                            <div class="favorites__team">
+                                <img src="images/liverpool.jpg" alt="Liverpool" class="team__logo-img">
+                                <h4 class="team__name">리버풀</h4>
+                                <p class="team__sport">축구</p>
+                            </div>
+                            <div class="favorites__team">
+                                <img src="images/T1.jpg" alt="T1" class="team__logo-img">
+                                <h4 class="team__name">T1</h4>
+                                <p class="team__sport">e스포츠</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 좋아하는 가수 -->
+                <div class="favorites__category">
+                    <div class="favorites__header">
+                        <i class="fas fa-microphone favorites__icon"></i>
+                        <h3 class="favorites__title">좋아하는 가수</h3>
+                    </div>
+                    <div class="favorites__content">
+                        <div class="favorites__artists">
+                            <span class="artist__tag">죠지</span>
+                            <span class="artist__tag">해리 스타일스</span>
+                            <span class="artist__tag">칸예 웨스트</span>
+                            <span class="artist__tag">SZA</span>
+                            <span class="artist__tag">제니</span>
+                            <span class="artist__tag">릴러말즈</span>
+                        </div>
+                        <p class="favorites__music-description">
+                            다양한 장르의 음악을 즐기며, 각 아티스트들의 
+                            독특한 색깔과 음악적 세계관을 좋아합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 개발 섹션 -->
+        <section class="development section" id="development">
+            <h2 class="section__title">개발</h2>
+            <span class="section__subtitle">내가 만들어온 것들</span>
+
+            <div class="development__container container">
+                <div class="development__timeline">
+                    <div class="timeline__item">
+                        <div class="timeline__marker">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="timeline__content">
+                            <h3 class="timeline__title">트위터 클론 프로젝트</h3>
+                            <span class="timeline__period">대학교 시절</span>
+                            <p class="timeline__description">
+                                MySQL과 Java를 사용하여 트위터의 주요 기능들을 구현하는 프로젝트를 진행했습니다. 
+                                데이터베이스 설계부터 백엔드 로직까지 전반적인 개발 과정을 경험했습니다.
+                            </p>
+                            <div class="timeline__tech">
+                                <span class="tech__tag">MySQL</span>
+                                <span class="tech__tag">Java</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__marker">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="timeline__content">
+                            <h3 class="timeline__title">AI 의류 추천 시스템</h3>
+                            <span class="timeline__period">대학교 시절</span>
+                            <p class="timeline__description">
+                                딥러닝을 학습하여 사용자의 선호도에 맞는 의류를 추천하는 프로젝트를 진행했습니다. 
+                                머신러닝과 AI에 대한 기초 지식을 쌓는 좋은 경험이었습니다.
+                            </p>
+                            <div class="timeline__tech">
+                                <span class="tech__tag">Python</span>
+                                <span class="tech__tag">딥러닝</span>
+                                <span class="tech__tag">AI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item current">
+                        <div class="timeline__marker">
+                            <i class="fas fa-charging-station"></i>
+                        </div>
+                        <div class="timeline__content">
+                            <h3 class="timeline__title">전기차 정보 서비스</h3>
+                            <span class="timeline__period">현재 진행 중</span>
+                            <p class="timeline__description">
+                                성남시에서 진행하는 프로젝트에 참여 중입니다. 전기차 보조금 및 충전소 위치 조회와 
+                                충전기 스펙을 실시간으로 제공하는 서비스를 개발하고 있으며, 현재 배포된 상태입니다.
+                            </p>
+                            <div class="timeline__tech">
+                                <span class="tech__tag">웹 개발</span>
+                                <span class="tech__tag">실시간 데이터</span>
+                                <span class="tech__tag">공공 서비스</span>
+                            </div>
+                            <div class="timeline__status">
+                                <span class="status__badge">배포 완료</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 연락처 섹션 -->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">연락하기</h2>
+            <span class="section__subtitle">함께 일해요</span>
+
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="fas fa-phone contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">전화하기</h3>
+                            <span class="contact__subtitle">010-1234-5678</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="fas fa-envelope contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">이메일</h3>
+                            <span class="contact__subtitle">haram001021@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="fas fa-map-marker-alt contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">위치</h3>
+                            <span class="contact__subtitle">서울, 대한민국</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="" class="contact__form grid">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label for="name" class="contact__label">이름</label>
+                            <input type="text" id="name" class="contact__input" placeholder="성함을 입력해주세요">
+                        </div>
+
+                        <div class="contact__content">
+                            <label for="email" class="contact__label">이메일</label>
+                            <input type="email" id="email" class="contact__input" placeholder="이메일을 입력해주세요">
+                        </div>
+                    </div>
+
+                    <div class="contact__content">
+                        <label for="project" class="contact__label">프로젝트</label>
+                        <input type="text" id="project" class="contact__input" placeholder="프로젝트명을 입력해주세요">
+                    </div>
+
+                    <div class="contact__content">
+                        <label for="message" class="contact__label">메시지</label>
+                        <textarea id="message" cols="0" rows="7" class="contact__input" placeholder="메시지를 입력해주세요"></textarea>
+                    </div>
+
+                    <div>
+                        <a href="#" class="button button--flex">
+                            메시지 보내기
+                            <i class="fas fa-paper-plane button__icon"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">정하람</h1>
+                    <span class="footer__subtitle">일상과 개발 이야기</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#about" class="footer__link">나에 대해</a>
+                    </li>
+                    <li>
+                        <a href="#hobbies" class="footer__link">취미</a>
+                    </li>
+                    <li>
+                        <a href="#favorites" class="footer__link">좋아하는 것</a>
+                    </li>
+                    <li>
+                        <a href="#development" class="footer__link">개발</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">연락처</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://github.com/CoderGogh" target="_blank" class="footer__social" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; 정하람. 모든 권리 보유.</p>
+        </div>
+    </footer>
+
+    <!-- 스크롤업 버튼 -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-arrow-up scrollup__icon"></i>
+    </a>
+
+    <!-- 메인 JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
