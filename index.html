@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team 6 - Ureca BE 비대면</title>
+
+  <style>
+    @font-face {
+      font-family: 'Jalnan';
+      src: url('./font/Jalnan.ttf') format('opentype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Jalnan';
+    }
+
+    html, body {
+      height: 100%;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+      background-color: #f9fafb;
+      color: #333;
+    }
+
+    section {
+      width: 100%;
+      height: 100vh;
+      scroll-snap-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      transition: opacity 1.0s ease, transform 0.8s ease;
+      opacity: 0;
+      transform: scale(0.98);
+    }
+
+    section.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* ✅ Hero */
+    #hero {
+      background: linear-gradient(135deg, #1C1E3A, #3C46A3);
+      color: #FFFFFF;
+    }
+
+    #hero h1 {
+      font-size: 80px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    #hero p {
+      font-size: 22px;
+      opacity: 0.9;
+    }
+
+    /* ✅ Intro */
+    #intro {
+      background-color: #FFFFFF;
+      color: #3C46A3;
+      font-size: 50px;
+    }
+
+    /* ✅ Links */
+    #links {
+      background-color: #ECEFF9;
+      padding: 80px 0;
+    }
+
+    #links h2 {
+      color: #3C46A3;
+      margin-bottom: 40px;
+      font-size: 36px;
+    }
+
+    .grid-container {
+      width: 85%;
+      max-width: 900px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      padding: 40px;
+      font-size: 22px;
+      color: #3C46A3;
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s, color 0.4s;
+    }
+
+    .card:hover {
+      background: #3C46A3;
+      color: #fff;
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ✅ Join */
+    #join {
+      background-color: #FFFFFF;
+      color: #3C46A3;
+      padding: 100px 0;
+    }
+
+    #join h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 80%;
+      max-width: 500px;
+    }
+
+    input, textarea {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      font-size: 16px;
+      resize: none;
+      transition: border 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border: 1px solid #3C46A3;
+    }
+
+    button {
+      background-color: #3C46A3;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      padding: 15px 0;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #2F3587;
+    }
+
+    /* ✅ 반응형 */
+    @media (max-width: 768px) {
+      #hero h1 {
+        font-size: 56px;
+      }
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ Hero Section -->
+  <section id="hero" class="active">
+    <h1>Team 6</h1>
+    <p>함께 배우고 성장하는 백엔드 비대면 DB 6조</p>
+  </section>
+
+  <!-- ✅ Intro Section -->
+  <section id="intro">
+    UREKA BE 비대면 DB 6조
+  </section>
+
+  <!-- ✅ Links Section -->
+  <section id="links">
+    <h2>팀원 소개 페이지</h2>
+    <div class="grid-container">
+      <a class="card" href="kimjoonha/index.html" target="_blank" rel="noopener noreferrer">김준하</a>
+<a class="card" href="cspark/IntroductionCSPark.html" target="_blank" rel="noopener noreferrer">박창선</a>
+<a class="card" href="ms/index.html" target="_blank" rel="noopener noreferrer">이민석</a>
+<a class="card" href="Jeongharam-Introduction/index.html" target="_blank" rel="noopener noreferrer">정하람</a>
+<a class="card" href="jhs/jhsindex.html" target="_blank" rel="noopener noreferrer">정현서</a>
+<a class="card" href="hong/index.html" target="_blank" rel="noopener noreferrer">현홍석</a>
+
+    </div>
+  </section>
+
+  <!-- ✅ Join Section -->
+  <section id="join">
+    <h2>Team 6 가입 신청</h2>
+    <form>
+      <input type="text" placeholder="이름" required />
+      <input type="email" placeholder="이메일" required />
+      <textarea rows="5" placeholder="하고 싶은 말"></textarea>
+      <button type="submit">신청하기</button>
+    </form>
+  </section>
+
+  <script>
+    // ✅ 스크롤 시 fade-in/out 애니메이션 제어
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            sections.forEach((s) => s.classList.remove('active'));
+            entry.target.classList.add('active');
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+  </script>
+</body>
+</html>
