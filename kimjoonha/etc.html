@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Andy — Etc.</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    /* 페이지 전용(다른 페이지에 영향 X) */
+    .page-etc main { padding-top: 32px; }
+    .etc-hero {
+      max-width: 980px; margin: 0 auto 24px; padding: 0 16px;
+    }
+    .etc-title {
+      margin: 0 0 6px;
+      font-weight: 900; letter-spacing: -0.02em;
+      font-size: clamp(28px, 5vw, 48px);
+      line-height: 1.05;
+    }
+    .etc-sub { color: var(--muted); margin: 0 0 16px; }
+
+    .etc-grid {
+      max-width: 980px; margin: 0 auto; padding: 0 16px 40px;
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 860px) { .etc-grid { grid-template-columns: 1fr 1fr; } }
+
+    .etc-card {
+      border: 1px solid var(--border); border-radius: 16px;
+      padding: 20px; background: #fff; box-shadow: var(--shadow);
+    }
+    .etc-card h2 {
+      margin: 0 0 10px; font-size: 20px;
+    }
+    .etc-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+    .etc-row {
+      display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: center;
+      padding: 10px; border: 1px solid var(--border); border-radius: 12px; background: #fff;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .etc-row:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,.08); }
+    .etc-row a { color: var(--text); text-decoration: none; }
+    .etc-row a:hover { text-decoration: underline; }
+
+    .etc-goals { display: grid; gap: 10px; }
+    .etc-badge {
+      display: inline-block; padding: 4px 10px; border: 1px solid var(--border);
+      border-radius: 999px; font-size: 12px; color: var(--muted); margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body class="page-etc">
+  <nav class="nav" role="navigation" aria-label="주요 메뉴">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Andy</a>
+      <div class="tabs">
+        <a class="tab-btn" href="index.html">About Me</a>
+        <a class="tab-btn" href="about.html">Favorite</a>
+        <a class="tab-btn active" href="etc.html" aria-current="page">Etc.</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="etc-hero">
+      <h1 class="etc-title">Etc.</h1>
+    </header>
+
+    <section class="etc-grid" aria-label="연락처와 목표">
+      <!-- 연락처 -->
+      <article class="etc-card" aria-labelledby="contactTitle">
+        <h2 id="contactTitle">Contact</h2>
+        <ul class="etc-list">
+          <li class="etc-row">
+            <!-- Mail Icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.6"/>
+              <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div>
+              <!-- TODO: 실제 이메일로 교체 -->
+              <a href="mailto:you@example.com">kimjoonha0426@gmail.com</a>
+            </div>
+          </li>
+          <li class="etc-row">
+            <!-- Instagram Icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+            </svg>
+            <div>
+              <!-- TODO: 실제 인스타 아이디/링크로 교체 -->
+              <a href="https://instagram.com/your_handle" target="_blank" rel="noopener">joonha__01</a>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- 목표 -->
+      <article class="etc-card" aria-labelledby="goalTitle">
+        <h2 id="goalTitle">목표</h2>
+        <div class="etc-goals">
+          <!-- 예시: 자유롭게 수정하세요 -->
+          <div>• 꾸준히 운동하기</div>
+          <div>• 유레카 수료 & 취업</div>
+          <div>• 꾸준히 TIL 작성하기</div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- 이 페이지는 스크롤 효과 없음: app.js가 pin-scene을 찾지 못하면 아무 것도 하지 않으므로 그대로 둬도 OK -->
+  <script src="./app.js"></script>
+</body>
+</html>
