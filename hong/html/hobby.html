@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hong's Hobby</title>
+
+  <link rel="stylesheet" href="../css/color.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #f9fafb;
+      font-family: 'Jalnan';
+      color: #333;
+    }
+
+    header {
+    width: 100%;
+    height: 80px; /* ✅ index nav와 동일 높이 */
+    background: #6a75ca;
+    color: white;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    }
+
+
+    main {
+      width: 90%;
+      max-width: 1000px;
+      margin: 50px auto;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hobby-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      width: 280px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hobby-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .hobby-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .hobby-card h3 {
+      color: #6a75ca;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>취미</header>
+
+  <main>
+    <div class="hobby-card flex-col-align-center">
+      <img src="../img/hobby-baseball.jpg" alt="야구 보기" />
+      <h3>야구 보기</h3>
+    </div>
+
+    <div class="hobby-card flex-col-align-center">
+      <img src="../img/hobby-soccer.png" alt="축구 보기" />
+      <h3>축구 보기</h3>
+    </div>
+
+    <div class="hobby-card flex-col-align-center">
+      <img src="../img/hobby-movie.png" alt="영화 보기" />
+      <h3>영화 보기</h3>
+    </div>
+  </main>
+</body>
+</html>

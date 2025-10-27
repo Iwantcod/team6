@@ -1,0 +1,42 @@
+.font-purple {
+    color: #6A75CA;
+}
+
+.font-white {
+    color: #FFFFFF;
+}
+
+.font-black {
+    color: black;
+}
+
+.font-gray{
+    color: #4d4d4f;
+}
+
+/* background Style */
+
+.back-purple {
+    background-color: #6A75CA;
+}
+
+.back-white {
+    background-color: white;
+}
+
+.back-black {
+    background-color: black;
+}
+
+.back-gray{
+    background-color: #EFF2F8;
+}
+
+
+
+@font-face {
+    font-family: 'Jalnan';
+    src: url('../font/Jalnan.ttf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
