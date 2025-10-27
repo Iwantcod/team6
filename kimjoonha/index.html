@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Andy — About Me</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="주요 메뉴">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Andy</a>
+      <div class="tabs">
+        <a class="tab-btn active" href="index.html" aria-current="page">About Me</a>
+        <a class="tab-btn" href="about.html">Favorite</a>
+        <a class="tab-btn" href="etc.html">Etc.</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container container--no-max">
+    <!-- 핀 스크롤 전환 구간 (진입 직후부터 적용) -->
+    <section id="pinScene" class="pin-scene" aria-label="키워드 전환">
+      <!-- 화면에 고정되는 뷰포트 -->
+      <div class="pin-viewport">
+        <!-- 하단 고정 안내/화살표 -->
+        <div class="pin-hint">
+          <div class="pin-hint-text">계속해서 스크롤해주세요</div>
+          <button class="scroll-indicator" aria-label="아래로 스크롤" id="nextSlideBtn">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 슬라이드 0: Introduction (첫 화면) -->
+        <div class="pin-slide is-active" data-slide="0">
+          <div class="intro-slide">
+            <h1 class="intro-heading reveal-onload" data-onload-order="1">Introduction</h1>
+            <!-- 화면 전체 기준 우측 끝, 제목 기준 20px 아래, bold -->
+            <div class="intro-subname reveal-onload" data-onload-order="2">김준하</div>
+          </div>
+        </div>
+
+        <!-- 슬라이드 1: 01년생 -->
+        <div class="pin-slide" data-slide="1">
+          <div class="stage-content">
+            <div class="kword">01년생</div>
+          </div>
+        </div>
+
+        <!-- 슬라이드 2: MBTI (이미지 좌측, 텍스트 우측) -->
+        <div class="pin-slide" data-slide="2">
+          <section class="stage stage--split">
+            <div class="stage-split-wrap">
+              <!-- 왼쪽: 780x780 MBTI 이미지 -->
+              <div class="stage-split-left">
+                <img
+                  src="images/intj_image.png"
+                  alt="INTJ MBTI 이미지"
+                  class="mbti-img"
+                  width="780"
+                  height="780"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+              </div>
+
+              <!-- 오른쪽: 키워드/값 -->
+              <div class="stage-split-right">
+                <div class="stage-content">
+                  <div class="kword">MBTI</div>
+                  <div class="kvalue">INTJ</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- 슬라이드 3: 거주지 부산 (텍스트 좌측, 이미지 우측) -->
+        <div class="pin-slide" data-slide="3">
+          <section class="stage stage--split">
+            <div class="stage-split-wrap">
+              <!-- 왼쪽: 키워드/값 -->
+              <div class="stage-split-left">
+                <div class="stage-content">
+                  <div class="kword">거주지</div>
+                  <div class="kvalue">부산</div>
+                </div>
+              </div>
+
+              <!-- 오른쪽: 부산 이미지 -->
+              <div class="stage-split-right">
+                <img
+                  src="images/busan.jpg"
+                  alt="부산 풍경"
+                  class="busan-img"
+                  width="5472"
+                  height="3648"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- 슬라이드 4: 전공 -->
+        <div class="pin-slide" data-slide="4">
+          <div class="stage-content">
+            <div class="kword">전공</div>
+            <div class="kvalue">컴퓨터공학</div>
+          </div>
+        </div>
+
+        <!-- 슬라이드 5: Tech Stack -->
+        <div class="pin-slide" data-slide="5">
+          <div class="stage-content">
+            <h2 class="kword" style="margin-bottom:16px;">Tech Stack</h2>
+            <div class="tech-box">
+              <figure class="tech">
+                <img src="images/java.png" alt="Java" loading="lazy">
+                <figcaption>Java</figcaption>
+              </figure>
+              <figure class="tech">
+                <img src="images/spring.png" alt="Spring Boot" loading="lazy">
+                <figcaption>Spring Boot</figcaption>
+              </figure>
+              <figure class="tech">
+                <img src="images/jpa.jpg" alt="JPA" loading="lazy">
+                <figcaption>JPA</figcaption>
+              </figure>
+              <figure class="tech">
+                <img src="images/mysql.png" alt="MySQL" loading="lazy">
+                <figcaption>MySQL</figcaption>
+              </figure>
+              <figure class="tech">
+                <img src="images/mariadb.png" alt="MariaDB" loading="lazy">
+                <figcaption>MariaDB</figcaption>
+              </figure>
+              <figure class="tech">
+                <img src="images/redis.png" alt="Redis" loading="lazy">
+                <figcaption>Redis</figcaption>
+              </figure>
+              <figure class="tech">
+                <img src="images/aws.png" alt="AWS" loading="lazy">
+                <figcaption>AWS</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
