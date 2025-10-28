@@ -5,65 +5,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hong's Hobby</title>
 
+  <!-- ✅ Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ✅ 공통 CSS -->
   <link rel="stylesheet" href="../css/color.css" />
   <link rel="stylesheet" href="../css/layout.css" />
 
   <style>
-    body {
-      margin: 0;
-      background-color: #f9fafb;
+    @font-face {
       font-family: 'Jalnan';
+      src: url('../font/Jalnan.ttf') format('opentype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'Jalnan';
+      background-color: #f9fafb;
       color: #333;
+      margin: 0;
     }
 
+    /* ---------- Header ---------- */
     header {
-    width: 100%;
-    height: 80px; /* ✅ index nav와 동일 높이 */
-    background: #6a75ca;
-    color: white;
-    font-size: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    }
-
-
-    main {
-      width: 90%;
-      max-width: 1000px;
-      margin: 50px auto;
+      background-color: #6a75ca;
+      color: #fff;
+      height: 80px;
       display: flex;
       justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
+      align-items: center;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .hobby-card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      width: 280px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* ---------- Main ---------- */
+    main {
+      height: calc(90vh - 80px); /* 브라우저 높이 기준 90%, header 제외 */
+      display: flex;
+      align-items: center;
     }
 
-    .hobby-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    /* ---------- Card ---------- */
+    .card {
+      border: none;
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+      width: 340px; /* ✅ 살짝 더 키움 */
+      height: 450px; /* ✅ 전체 높이 확장 */
+      margin: 0 auto;
+      overflow: hidden;
     }
 
-    .hobby-card img {
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+      background-color: #f4f5ff;
+    }
+
+    .card img {
+      height: 260px; /* ✅ 이미지 비율 확대 */
+      object-fit: cover;
+      border-radius: 18px 18px 0 0;
+      transition: transform 0.35s ease;
       width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
     }
 
-    .hobby-card h3 {
+    .card-body {
+      text-align: center;
+      padding: 28px 16px 32px 16px; /* ✅ 내부 여백 확장 */
+      transition: transform 0.35s ease;
+    }
+
+    .card:hover img,
+    .card:hover .card-body {
+      transform: scale(1.03);
+    }
+
+    .card-title {
       color: #6a75ca;
-      font-size: 22px;
+      font-size: 24px;
+      font-weight: bold;
       margin-bottom: 10px;
+    }
+
+    .card-text {
+      color: #4d4d4f;
+      font-size: 16px;
+    }
+
+    /* ---------- 반응형 ---------- */
+    @media (max-width: 992px) {
+      .card {
+        width: 300px;
+        height: 420px;
+      }
+      .card img {
+        height: 240px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        font-size: 28px;
+      }
+      main {
+        height: auto;
+        padding: 40px 0;
+      }
+      .card {
+        width: 80%;
+        height: auto;
+      }
+      .card img {
+        height: 240px;
+      }
     }
   </style>
 </head>
@@ -71,21 +134,59 @@
 <body>
   <header>취미</header>
 
-  <main>
-    <div class="hobby-card flex-col-align-center">
-      <img src="../img/hobby-baseball.jpg" alt="야구 보기" />
-      <h3>야구 보기</h3>
-    </div>
+  <main class="container py-5">
+    <div class="row justify-content-center g-4 w-100">
+      <!-- 야구 -->
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+        <div class="card h-100">
+          <img src="../img/hobby-baseball.jpg" class="card-img-top" alt="야구 보기" />
+          <div class="card-body">
+            <h5 class="card-title">야구 보기</h5>
+            <p class="card-text">즐겨보는 팀: <b class="text-primary">SSG 랜더스</b></p>
+          </div>
+        </div>
+      </div>
 
-    <div class="hobby-card flex-col-align-center">
-      <img src="../img/hobby-soccer.png" alt="축구 보기" />
-      <h3>축구 보기</h3>
-    </div>
+      <!-- 축구 -->
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+        <div class="card h-100">
+          <img src="../img/hobby-soccer.png" class="card-img-top" alt="축구 보기" />
+          <div class="card-body">
+            <h5 class="card-title">축구 보기</h5>
+            <p class="card-text">응원팀: <b class="text-primary">인천 유나이티드</b></p>
+          </div>
+        </div>
+      </div>
 
-    <div class="hobby-card flex-col-align-center">
-      <img src="../img/hobby-movie.png" alt="영화 보기" />
-      <h3>영화 보기</h3>
+      <!-- 영화 -->
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+        <div class="card h-100">
+          <img src="../img/hobby-movie.png" class="card-img-top" alt="영화 보기" />
+          <div class="card-body">
+            <h5 class="card-title">영화 보기</h5>
+            <p class="card-text">좋아하는 장르: <b class="text-primary">뮤지컬 🎬</b></p>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
+
+  <script>
+    // ✅ 색상 통일
+    const style = document.createElement("style");
+    style.innerHTML = `
+      .text-primary {
+        color: #6a75ca !important;
+      }
+      a, a:visited {
+        color: #6a75ca !important;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #5a67b2 !important;
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
 </body>
 </html>
