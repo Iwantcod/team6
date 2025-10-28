@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>소개</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-body-tertiary fixed-top border-bottom">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Que</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="about.html">소개</a></li>
+        <li class="nav-item"><a class="nav-link" href="others.html">관심사</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container" style="padding-top:88px">
+  <h1 class="h3 mb-3">소개</h1>
+
+  <div class="row g-3">
+    <!-- ⬅︎ 사진/사이드가 왼쪽: order-lg-1 -->
+    <div class="col-12 col-lg-4 order-lg-1">
+      <div class="card p-3">
+        <h2 class="h6">안녕하세요! 정현서입니다</h2>
+        <img src="image/face.png" class="img-fluid rounded border" alt="face">
+      </div>
+      <div class="card p-3 mt-3">
+        <h2 class="h6">연락</h2>
+        <p class="small text-secondary mb-2">Git : <a href="https://github.com/Jung-Que" target="_blank">Jung-Que</a></p>
+        <p class="small text-secondary mb-2">Email : <a href="mailto:example@example.com">hahahajhs0529@gmail.com</a></p>
+        <a class="btn btn-sm btn-outline-secondary" href="index.html">홈으로</a>
+      </div>
+    </div>
+
+    <!-- 본문은 오른쪽: order-lg-2 -->
+    <div class="col-12 col-lg-8 order-lg-2">
+      <div class="card p-3">
+        <h2 class="h5">기본 정보</h2>
+        <ul class="mb-0">
+          <li>전공: 컴퓨터공학</li>
+          <li>성향: ISTP</li>
+          <li>관심 분야: 자료구조·알고리즘, 도구 제작, 간단한 게임 툴</li>
+        </ul>
+      </div>
+
+      <div class="card p-3 mt-3">
+        <h2 class="h5">강점</h2>
+        <ul class="mb-0">
+          <li>문제 단순화 → 재현 가능한 형태로 정리</li>
+          <li>증거 우선: 숫자/로그/캡처로 확인</li>
+          <li>필요한 도구를 직접 만들어 협업속도 상승</li>
+        </ul>
+      </div>
+
+      <div class="card p-3 mt-3">
+        <h2 class="h5">최근 공부 주제</h2>
+        <ul class="mb-0">
+          <li>BFS/DFS/DP 템플릿 정리</li>
+          <li>웹 기초(JS/폼 검증/스토리지)</li>
+          <li>간단한 에셋으로 발표자료 구성</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="py-4 border-top mt-4">
+  <div class="container small text-secondary d-flex justify-content-between">
+    <span>© 2025 Que</span>
+    <a href="#" class="link-secondary">위로</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
