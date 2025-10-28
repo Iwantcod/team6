@@ -15,7 +15,10 @@
   --text-color: hsl(var(--hue-color), 8%, 45%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 60%, 99%);
+  /* 페이지 기본 배경: 완전한 흰색 대신 연-청색 계열의 고급스러운 색조로 변경 */
+  --body-color: hsl(var(--hue-color), 60%, 94%);
+  /* 실제 바디에 사용할 그라데이션 (헤더/카드 등은 --body-color 색상을 사용) */
+  --body-bg: linear-gradient(180deg, hsl(var(--hue-color), 95%, 98%), hsl(var(--hue-color), 60%, 94%));
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
@@ -76,6 +79,8 @@ body.dark-theme {
   --container-color: hsl(var(--hue-color), 29%, 16%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+  /* 다크테마에서는 그라데이션 대신 단색 배경을 사용하도록 설정 */
+  --body-bg: var(--body-color);
 }
 
 /* 기본 스타일 */
@@ -93,7 +98,8 @@ body {
   margin: 0 0 var(--header-height) 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  /* 연-청색 그라데이션 배경을 사용 (다크테마일 때는 --body-bg가 단색으로 바뀜) */
+  background: var(--body-bg);
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -138,7 +144,7 @@ img {
 }
 
 /* 레이아웃 */
-.container {
+.site-container {
   max-width: 768px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
@@ -161,7 +167,7 @@ img {
 }
 
 /* 내비게이션 */
-.nav {
+.site-nav {
   max-width: 968px;
   height: var(--header-height);
   display: flex;
@@ -338,8 +344,8 @@ img {
   font-size: 1.25rem;
 }
 
-/* 버튼 */
-.button {
+/* 버튼 (네임스페이스: custom-button) */
+.custom-button {
   display: inline-block;
   background-color: var(--first-color);
   color: #fff;
@@ -348,32 +354,32 @@ img {
   font-weight: var(--font-medium);
 }
 
-.button:hover {
+.custom-button:hover {
   background-color: var(--first-color-alt);
 }
 
-.button__icon {
+.custom-button__icon {
   font-size: 1.25rem;
   margin-left: var(--mb-0-5);
   transition: .3s;
 }
 
-.button--flex {
+.custom-button--flex {
   display: inline-flex;
   align-items: center;
 }
 
-.button--small {
+.custom-button--small {
   padding: .75rem 1rem;
 }
 
-.button--link {
+.custom-button--link {
   padding: 0;
   background-color: transparent;
   color: var(--first-color);
 }
 
-.button--link:hover {
+.custom-button--link:hover {
   background-color: transparent;
   color: var(--first-color-alt);
 }
@@ -914,7 +920,7 @@ img {
 /* 미디어 쿼리 */
 /* 작은 기기 */
 @media screen and (max-width: 350px) {
-  .container {
+  .site-container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
@@ -972,7 +978,7 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .container {
+  .site-container {
     margin-left: auto;
     margin-right: auto;
   }

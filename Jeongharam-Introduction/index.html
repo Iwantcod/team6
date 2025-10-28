@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>정하람의 개발 블로그 | Frontend Developer</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ENjdO4Dr2bkBIFxQpeoA6V2QZ6Y9QZ6Y9QZ6Y9QZ6Y9QZ6Y9QZ6Y9QZ6Y9QZ6Y9QZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -11,7 +13,7 @@
 <body>
     <!-- 헤더 네비게이션 -->
     <header class="header" id="header">
-        <nav class="nav container">
+        <nav class="site-nav site-container container">
             <div class="nav__logo">
                 <span>정하람</span>
                 <i class="fas fa-code"></i>
@@ -68,7 +70,7 @@
     <main class="main">
         <!-- 홈 섹션 -->
         <section class="home section" id="home">
-            <div class="home__container container grid">
+            <div class="home__container site-container container grid">
                 <div class="home__content grid">
                     <div class="home__social">
                         <a href="https://github.com/CoderGogh" target="_blank" class="home__social-icon" aria-label="GitHub">
@@ -105,14 +107,14 @@
                             개발과 일상의 소소한 즐거움을 함께 나누고 싶어 
                             이 블로그를 만들게 되었습니다.
                         </p>
-                        <a href="#about" class="button button--flex home__button">
-                            더 알아보기 <i class="fas fa-arrow-down button__icon"></i>
+                        <a href="#about" class="custom-button custom-button--flex home__button btn btn-primary">
+                            더 알아보기 <i class="fas fa-arrow-down custom-button__icon"></i>
                         </a>
                     </div>
                 </div>
 
                 <div class="home__scroll">
-                    <a href="#about" class="home__scroll-button button--flex">
+                    <a href="#about" class="home__scroll-button custom-button--flex">
                         <i class="fas fa-mouse home__scroll-mouse"></i>
                         <span class="home__scroll-name">스크롤 다운</span>
                         <i class="fas fa-arrow-down home__scroll-arrow"></i>
@@ -126,7 +128,7 @@
             <h2 class="section__title">나에 대해</h2>
             <span class="section__subtitle">간단한 자기소개</span>
 
-            <div class="about__container container grid">
+            <div class="about__container site-container container grid">
                 <img src="images/profile.jpg" alt="정하람 프로필" class="about__img">
 
                 <div class="about__data">
@@ -165,7 +167,7 @@
             <h2 class="section__title">내 취미</h2>
             <span class="section__subtitle">일상을 즐겁게 만드는 것들</span>
 
-            <div class="hobbies__container container grid">
+            <div class="hobbies__container site-container container grid">
                 <div class="hobbies__card">
                     <div class="hobbies__icon">
                         <i class="fas fa-dumbbell"></i>
@@ -218,7 +220,7 @@
             <h2 class="section__title">좋아하는 것들</h2>
             <span class="section__subtitle">나를 행복하게 만드는 것들</span>
 
-            <div class="favorites__container container">
+            <div class="favorites__container site-container container">
                 <!-- 강아지 -->
                 <div class="favorites__category">
                     <div class="favorites__header">
@@ -303,7 +305,7 @@
             <h2 class="section__title">개발</h2>
             <span class="section__subtitle">내가 만들어온 것들</span>
 
-            <div class="development__container container">
+            <div class="development__container site-container container">
                 <div class="development__timeline">
                     <div class="timeline__item">
                         <div class="timeline__marker">
@@ -372,7 +374,7 @@
             <h2 class="section__title">연락하기</h2>
             <span class="section__subtitle">함께 일해요</span>
 
-            <div class="contact__container container grid">
+            <div class="contact__container site-container container grid">
                 <div>
                     <div class="contact__information">
                         <i class="fas fa-phone contact__icon"></i>
@@ -426,10 +428,10 @@
                     </div>
 
                     <div>
-                        <a href="#" class="button button--flex">
-                            메시지 보내기
-                            <i class="fas fa-paper-plane button__icon"></i>
-                        </a>
+                        <button type="submit" class="btn btn-primary">
+                                메시지 보내기
+                                <i class="fas fa-paper-plane custom-button__icon"></i>
+                            </button>
                     </div>
                 </form>
             </div>
@@ -439,7 +441,7 @@
     <!-- 푸터 -->
     <footer class="footer">
         <div class="footer__bg">
-            <div class="footer__container container grid">
+            <div class="footer__container site-container container grid">
                 <div>
                     <h1 class="footer__title">정하람</h1>
                     <span class="footer__subtitle">일상과 개발 이야기</span>
@@ -480,6 +482,8 @@
     </a>
 
     <!-- 메인 JS -->
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2mVbZ6Z6Y9QZ6Y9QZ6Y9QZ6Y9QZ6Y9QZ6Y9QZ6Y9" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
