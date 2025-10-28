@@ -187,13 +187,30 @@ a:hover { text-decoration: underline; }
 /* 부산 (이미지 오른쪽, 텍스트 왼쪽) */
 .pin-slide[data-slide="3"] .stage-split-left { justify-content: flex-start; }
 .pin-slide[data-slide="3"] .stage-split-right { justify-content: flex-end; }
+.pin-slide[data-slide="3"] .kword {
+  white-space: nowrap;
+  word-break: keep-all;
+}
 .pin-slide[data-slide="3"] .busan-img {
   width: 100%;
-  max-width: 640px;
+  max-width: 1280px;
   height: auto;
+  object-fit: contain;
   border-radius: 16px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+  transform: translateX(140px) scale(1.5);
+  transform-origin: center;
+}
+
+/* 슬라이드 3 컨테이너 확장 및 비율 고려 배치 */
+.pin-slide[data-slide="3"] .stage-split-wrap {
+  width: min(1400px, 96vw);
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+@media (max-width: 720px) {
+  .pin-slide[data-slide="3"] .busan-img { max-width: 98vw; }
 }
 
 /* Tech Box (index 마지막) */
