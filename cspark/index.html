@@ -1,48 +1,175 @@
-<!-- FILE: index.html -->
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>박창선 - 자기소개</title>
-<link rel="stylesheet" href="css/style.css">
-<!-- internal CSS -->
-<style>
-header { background:#1e293b; color:white; padding:20px; border-radius:8px; }
-.intro { margin-top:20px; line-height:1.6; }
-.nav-links a { color:#0ea5a4; margin-right:12px; text-decoration:none; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>박창선 - 서버 개발자 포트폴리오</title>
+
+  <!-- ✅ Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans KR', sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+    }
+    .navbar { background-color: #1e293b !important; }
+    .navbar-brand { font-weight: 700; color: #38bdf8 !important; }
+    .nav-link { color: #e2e8f0 !important; }
+    .nav-link.active { color: #38bdf8 !important; font-weight: 600; }
+
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      padding: 80px 16px;
+    }
+    .hero h1 { font-size: 2.8rem; font-weight: 700; color: #38bdf8; }
+    .hero p { font-size: 1.2rem; color: #cbd5e1; }
+    .btn-primary {
+      background-color: #38bdf8;
+      border: none;
+      transition: 0.3s;
+    }
+    .btn-primary:hover { background-color: #0ea5e9; }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #38bdf8;
+      text-align: center;
+    }
+    .card {
+      background-color: #1e293b;
+      border: none;
+      color: #f1f5f9;
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      color: #94a3b8;
+      padding: 20px 0;
+    }
+  </style>
 </head>
 <body>
-<header>
-<h1>안녕하세요, 유레카 3기 6조 박창선입니다!</h1>
-<nav class="nav-links">
-<a href="index.html">Home</a>
-<a href="travel-abroad.html">해외여행</a>
-<a href="travel-korea.html">국내여행</a>
+
+<!-- ✅ Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">박창선</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="travel-abroad.html">해외여행</a></li>
+        <li class="nav-item"><a class="nav-link" href="travel-korea.html">국내여행</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
-</header>
 
+<!-- ✅ Hero Section -->
+<section class="hero">
+  <h1>안녕하세요.<br>서버 개발자 박창선입니다</h1>
+  <p class="mt-3">
+    백엔드 시스템 설계부터 운영까지 — 효율과 안정성을 추구하는 개발자입니다.<br>
+    Java · Spring Boot · Redis · Docker 기반 서버 개발 경험을 가지고 있습니다.
+  </p>
+  <a href="#about" class="btn btn-primary btn-lg mt-4">더 알아보기</a>
+</section>
 
-<main class="intro">
-<h2>자기소개</h2>
-<p>유레카 3기 비대면반 6조 박창선입니다. 저는 컴퓨터 공학을 전공하였으며 새로운 기술과 경험을 통해 성장하는 것을 즐기며 ESTP 성격답게 도전적이고 실행력이 강한 편입니다.</p>
+<!-- ✅ About Section -->
+<section id="about" class="container py-5">
+  <h2 class="section-title">👨‍💻 About Me</h2>
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <p class="lead text-center text-secondary">
+        유레카 3기 6조의 <strong>서버 개발자</strong> 박창선입니다.<br>
+        컴퓨터 공학 전공을 기반으로, 실무 프로젝트에서 <strong>Spring Boot, Redis, WebFlux, Docker</strong>를 활용하여
+        고성능 백엔드 시스템을 개발 및 운영했습니다.
+      </p>
+      <ul class="list-group list-group-flush bg-transparent mt-4">
+        <li class="list-group-item bg-transparent text-light">⚙️ MVNO Core 서버 통합 백엔드 설계 및 운영</li>
+        <li class="list-group-item bg-transparent text-light">📡 외부 API 연동 및 응답속도 50% 개선</li>
+        <li class="list-group-item bg-transparent text-light">🧠 Prometheus + Grafana 기반 모니터링 서버 구축</li>
+        <li class="list-group-item bg-transparent text-light">🚀 FCM 기반 푸시 서버 및 예약 발송 로직 구현</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
+<!-- ✅ Skills Section -->
+<section class="container py-5">
+  <h2 class="section-title">🛠 Tech Stack</h2>
+  <div class="row text-center g-3">
+    <div class="col-6 col-md-3"><div class="card p-3">Java</div></div>
+    <div class="col-6 col-md-3"><div class="card p-3">Spring Boot</div></div>
+    <div class="col-6 col-md-3"><div class="card p-3">Redis</div></div>
+    <div class="col-6 col-md-3"><div class="card p-3">Docker</div></div>
+    <div class="col-6 col-md-3"><div class="card p-3">MariaDB</div></div>
+    <div class="col-6 col-md-3"><div class="card p-3">Jenkins</div></div>
+    <div class="col-6 col-md-3"><div class="card p-3">Prometheus</div></div>
+    <div class="col-6 col-md-3"><div class="card p-3">Grafana</div></div>
+  </div>
+</section>
 
-<h3>좋아하는 활동</h3>
-<ul>
-<li>볼링 🎳</li>
-<li>여행 ✈️</li>
-</ul>
+<!-- ✅ Experience Section -->
+<section class="container py-5">
+  <h2 class="section-title">📂 Experience</h2>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card p-4 h-100">
+        <h5 class="fw-bold text-info">MVNO Core 서버 개발</h5>
+        <p class="text-secondary">
+          통합앱 백엔드 서비스 설계 및 운영, 외부 서비스 연동, 쿼리 및 로직 최적화로 응답속도 50% 개선.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card p-4 h-100">
+        <h5 class="fw-bold text-info">MVNO PUSH 서버</h5>
+        <p class="text-secondary">
+          FCM 메시지 발송 API, 예약 발송 기능 및 스케줄링 로직 구현으로 발송 속도 50% 향상.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card p-4 h-100">
+        <h5 class="fw-bold text-info">MVNO Admin / System API</h5>
+        <p class="text-secondary">
+          관리자 포털 백엔드 개발 및 WebFlux 기반 외부 통신 서버 구축. 비동기 전환으로 응답시간 20% 개선.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card p-4 h-100">
+        <h5 class="fw-bold text-info">모니터링 서버 구축</h5>
+        <p class="text-secondary">
+          Prometheus + Grafana 기반 서비스 지표 모니터링 및 알람 설정, 5건 이상의 장애 사전 대응 성공.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-
-<h3>앞으로의 계획</h3>
-<p>“앞에 있는 일에 집중하자” — 현재 맡은 일과 순간에 최선을 다하는 것이 제 목표입니다.</p>
-</main>
-
-
+<!-- ✅ Quote / Footer -->
 <footer>
-<p>© 2025 박창선</p>
+  <p class="mb-2">“앞에 있는 일에 집중하자.”</p>
+  <p>© 2025 박창선 | Server Developer Portfolio</p>
 </footer>
+
 </body>
-</html>

@@ -1,44 +1,132 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>박창선 - 해외여행</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>박창선 - 해외여행 갤러리</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans KR', sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+    }
+
+    .navbar { background-color: #1e293b !important; }
+    .navbar-brand { font-weight: 700; color: #38bdf8 !important; }
+    .nav-link { color: #e2e8f0 !important; }
+    .nav-link.active { color: #38bdf8 !important; }
+
+    .gallery-section {
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #38bdf8;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background-color: #1e293b;
+      border: none;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      border-radius: 12px 12px 0 0;
+      object-fit: cover;
+      width: 100%;      /* 부모 col의 너비에 맞춤 */
+      height: auto;     /* 원본 비율 유지 */
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      color: #94a3b8;
+      padding: 20px 0;
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<h1>해외여행 갤러리</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="travel-abroad.html">해외여행</a>
-<a href="travel-korea.html">국내여행</a>
+
+<!-- ✅ Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">박창선</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="travel-abroad.html">해외여행</a></li>
+        <li class="nav-item"><a class="nav-link" href="travel-korea.html">국내여행</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
-</header>
 
+<!-- ✅ Gallery Section -->
+<section class="gallery-section">
+  <div class="container">
+    <h2 class="section-title">🌏 해외여행 갤러리</h2>
+    <p class="text-center text-secondary mb-5">
+      세계 각지를 여행하며 담은 순간들입니다. <br>
+      다양한 문화와 풍경 속에서 새로운 영감을 얻었습니다.
+    </p>
 
-<main>
-<h2>잊을 수 없는 해외여행 순간들</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="\cspark\image\image02.jpg" alt="오사카 닌텐도월드" class="img-fluid">
+          <div class="card-body text-center">
+            <h5 class="card-title text-info">오사카 닌텐도월드</h5>
+            <p class="card-text text-secondary">유니버셜 스튜디오에서 게임 속 세상처럼 즐긴 하루.</p>
+          </div>
+        </div>
+      </div>
 
-<div class="gallery">
-<div>
-    <img src="\cspark\image\image02.jpg" alt="해외여행1" style="border:3px solid #0ea5a4; border-radius:8px;">
-    <p>오사카 유니버셜 스튜디오 – 닌텐도월드</p>
-</div>
-<div>
-    <img src="\cspark\image\image07.jpg" alt="해외여행2" style="border:3px solid #0ea5a4; border-radius:8px;">
-    <p>오사카 유니버셜 스튜디오 – 입구</p>
-</div>
-<div>
-    <img src="\cspark\image\image03.jpg" alt="해외여행3" style="border:3px solid #0ea5a4; border-radius:8px;">
-    <p>대만 지우펀 – 해열루 경관차방</p>
-</div>
-</div>
-</main>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="\cspark\image\image07.jpg" alt="유니버셜 입구" class="img-fluid">
+          <div class="card-body text-center">
+            <h5 class="card-title text-info">오사카 유니버셜 입구</h5>
+            <p class="card-text text-secondary">설렘 가득했던 여행의 시작점.</p>
+          </div>
+        </div>
+      </div>
 
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="\cspark\image\image03.jpg" alt="대만 지우펀" class="img-fluid">
+          <div class="card-body text-center">
+            <h5 class="card-title text-info">대만 지우펀</h5>
+            <p class="card-text text-secondary">애니메이션의 한 장면처럼, 따뜻했던 저녁 풍경.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ✅ Footer -->
 <footer>
-<p>© 2025 박창선</p>
+  <p>© 2025 박창선 | 해외여행 갤러리</p>
 </footer>
+
 </body>
 </html>
