@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>갤러리 — 이민석 (Bootstrap 5)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .card-img-top{object-fit:cover;height:220px}
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">Minseok Lee</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">홈</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">소개</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="gallery.html">갤러리</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-4">
+      <header class="mb-3">
+        <h1 class="h3">갤러리</h1>
+        <p class="text-secondary mb-0">여행 사진을 부트스트랩 카드 그리드로 보여줘요.</p>
+      </header>
+
+      <!-- 얼굴 사진 (원하면 주석 해제) -->
+      <!--
+      <div class="row g-3 mb-2">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm">
+            <img src="image.jpg" alt="내 사진" class="card-img-top">
+            <div class="card-body">
+              <figcaption class="card-text">👋 안녕하세요! 제 사진이에요. 😊</figcaption>
+            </div>
+          </div>
+        </div>
+      </div>
+      -->
+
+      <!-- 여행 사진 그리드 -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="눈내리는 길거리.jpg" class="card-img-top" alt="도쿄 시내">
+            <div class="card-body">
+              <p class="card-text">도쿄 시내 — 첫날 밤, 눈내리는 도쿄 길거리!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="센소지.jpg" class="card-img-top" alt="센소지 절">
+            <div class="card-body">
+              <p class="card-text">도쿄 센소지 — 센소지 절을 감상하며.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="스카이 트리.jpg" class="card-img-top" alt="스카이 트리">
+            <div class="card-body">
+              <p class="card-text">도쿄 스카이 트리 — 스카이 트리에서 야경 감상!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="요코하마.jpg" class="card-img-top" alt="요코하마">
+            <div class="card-body">
+              <p class="card-text">요코하마 — 맑은 날, 놀이기구가 정말 인상적이었어요.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-4 text-center text-secondary border-top">
+      © 2025 Minseok Lee
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

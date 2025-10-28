@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>소개 — 이민석 (Bootstrap 5)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .timeline{list-style:none;padding-left:0}
+      .timeline li{position:relative;padding-left:1.5rem;margin:.5rem 0}
+      .timeline li::before{content:"•";position:absolute;left:0;color:#2563eb}
+      .highlight{background:#fff7ed;padding:.15rem .35rem;border-radius:.35rem}
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">Minseok Lee</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">홈</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">소개</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">갤러리</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-4">
+      <header class="mb-3">
+        <h1 class="h3">소개</h1>
+      </header>
+
+      <section class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h2 class="h5">학습/경험</h2>
+          <ul class="timeline mb-0">
+            <li>컴퓨터공학 전공, 자료구조/운영체제/네트워크/DB 집중 학습</li>
+            <li>관련 개발: 사시측정 기기 (CV + ONNX)</li>
+            <li>Java Swing + JDBC로 영화 판매/관리 시스템 구현</li>
+            <li>백준 문제풀이로 알고리즘 역량 강화</li>
+            <li>일본 여행의 경험을 통해 시야 확장</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h5">관심 분야</h3>
+              <p class="mb-0">AI 기반 제조/금융 서비스, 컴퓨터 비전</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h5">목표</h3>
+              <p class="mb-0">현실 문제를 푸는 <strong>실용적 AI/백엔드 개발자</strong>가 되는 것</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4 text-center text-secondary border-top">
+      © 2025 Minseok Lee
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
