@@ -4,16 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Andy — About Me</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bs-body-bg: var(--bg);
+      --bs-body-color: var(--text);
+      --bs-border-color: var(--border);
+      --bs-primary: var(--text);
+      --bs-link-color: var(--link);
+      --bs-link-hover-color: var(--link);
+      --bs-secondary-color: var(--muted);
+    }
+  </style>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <nav class="nav" role="navigation" aria-label="주요 메뉴">
-    <div class="nav-inner">
-      <a class="brand" href="index.html">Andy</a>
-      <div class="tabs">
-        <a class="tab-btn active" href="index.html" aria-current="page">About Me</a>
-        <a class="tab-btn" href="about.html">Favorite</a>
-        <a class="tab-btn" href="etc.html">Etc.</a>
+  <nav class="navbar glassy-nav navbar-expand-md navbar-light" role="navigation" aria-label="주요 메뉴">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Andy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="토글 내비게이션">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Favorite</a></li>
+          <li class="nav-item"><a class="nav-link" href="etc.html">Etc.</a></li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -53,13 +70,13 @@
         <!-- 슬라이드 2: MBTI (이미지 좌측, 텍스트 우측) -->
         <div class="pin-slide" data-slide="2">
           <section class="stage stage--split">
-            <div class="stage-split-wrap">
+            <div class="stage-split-wrap row g-4 align-items-center justify-content-center">
               <!-- 왼쪽: 780x780 MBTI 이미지 -->
-              <div class="stage-split-left">
+              <div class="stage-split-left col-12 col-md-6">
                 <img
                   src="images/intj_image.png"
                   alt="INTJ MBTI 이미지"
-                  class="mbti-img"
+                  class="mbti-img img-fluid"
                   width="780"
                   height="780"
                   loading="lazy"
@@ -69,7 +86,7 @@
               </div>
 
               <!-- 오른쪽: 키워드/값 -->
-              <div class="stage-split-right">
+              <div class="stage-split-right col-12 col-md-6">
                 <div class="stage-content">
                   <div class="kword">MBTI</div>
                   <div class="kvalue">INTJ</div>
@@ -82,9 +99,9 @@
         <!-- 슬라이드 3: 거주지 부산 (텍스트 좌측, 이미지 우측) -->
         <div class="pin-slide" data-slide="3">
           <section class="stage stage--split">
-            <div class="stage-split-wrap">
+            <div class="stage-split-wrap row g-4 align-items-center justify-content-center">
               <!-- 왼쪽: 키워드/값 -->
-              <div class="stage-split-left">
+              <div class="stage-split-left col-12 col-md-6">
                 <div class="stage-content">
                   <div class="kword">거주지</div>
                   <div class="kvalue">부산</div>
@@ -92,11 +109,11 @@
               </div>
 
               <!-- 오른쪽: 부산 이미지 -->
-              <div class="stage-split-right">
+              <div class="stage-split-right col-12 col-md-6">
                 <img
                   src="images/busan.jpg"
                   alt="부산 풍경"
-                  class="busan-img"
+                  class="busan-img img-fluid"
                   width="5472"
                   height="3648"
                   loading="lazy"
@@ -156,6 +173,13 @@
     </section>
   </main>
 
+  <footer class="mt-5 py-4 border-top">
+    <div class="container text-center text-muted">
+      © 2025 Andy. All rights reserved.
+    </div>
+  </footer>
+
   <script src="./app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

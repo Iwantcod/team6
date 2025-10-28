@@ -20,7 +20,8 @@ a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* Nav */
-.nav {
+.nav,
+.navbar.glassy-nav {
   position: sticky; top:0; z-index: 20;
   background: rgba(255,255,255,.8);
   backdrop-filter: saturate(180%) blur(12px);
@@ -326,3 +327,36 @@ a:hover { text-decoration: underline; }
 /* 반응형 */
 @media (max-width: 900px) { .page-favorite .fav-gallery-five { --vw: 96vw; } }
 @media (max-width: 600px) { .page-favorite .fav-gallery-five { --vw: 98vw; } }
+
+/* ---- Etc 전용 (etc.html) ---- */
+.page-etc main { padding-top: 32px; }
+.page-etc .etc-hero { max-width: 980px; margin: 0 auto 24px; padding: 0 16px; }
+.page-etc .etc-title {
+  margin: 0 0 6px;
+  font-weight: 900; letter-spacing: -0.02em;
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 1.05;
+}
+.page-etc .etc-sub { color: var(--muted); margin: 0 0 16px; }
+.page-etc .etc-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.page-etc .etc-card h2 { margin: 0 0 10px; font-size: 20px; }
+.page-etc .etc-list { list-style: none; margin: 0; padding: 0; }
+.page-etc .etc-row {
+  display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: center;
+  padding: 10px; border: 1px solid var(--border); border-radius: 12px; background: #fff;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.page-etc .etc-row:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,.08); }
+.page-etc .etc-row a { color: var(--text); text-decoration: none; }
+.page-etc .etc-row a:hover { text-decoration: underline; }
+.page-etc .etc-goals { display: grid; gap: 10px; }
+.page-etc .etc-badge {
+  display: inline-block; padding: 4px 10px; border: 1px solid var(--border);
+  border-radius: 999px; font-size: 12px; color: var(--muted); margin-bottom: 8px;
+}
